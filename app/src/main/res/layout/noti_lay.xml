@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/main_menu"
+    android:clickable="true"
+    android:touchscreenBlocksFocus="true"
+    android:transitionGroup="true"
+    android:backgroundTintMode="src_over">
+
+
+    <ListView
+        android:descendantFocusability="blocksDescendants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_alignParentLeft="true"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true"
+        android:divider="#FFC1C1C1"
+        android:dividerHeight="2dp"
+        android:padding="1dp"
+        android:paddingEnd="3dp"
+        android:paddingStart="3dp"
+        android:background="#fffcfafb" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listView"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&lt;이전"
+            android:id="@+id/pre"
+            android:layout_marginRight="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="현재"
+            android:id="@+id/cur"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="다음>"
+            android:id="@+id/next"
+            android:layout_marginLeft="20dp" />
+    </LinearLayout>
+
+</RelativeLayout>

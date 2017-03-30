@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#ffffc90e"
+    android:id="@+id/board"
+    android:weightSum="1">
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:listSelector="@android:color/transparent"
+        android:id="@+id/reply_list"
+        android:layout_weight="0.95"
+        android:textAlignment="gravity"
+        android:touchscreenBlocksFocus="false"
+        android:divider="@null"
+        android:clickable="false"
+        android:background="#ff514759" />
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.05"
+        android:background="#ffffc90e"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:id="@+id/linearLayout">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/BoardEditText"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:editable="true"
+            android:hint="댓글을 입력해주세요"
+            android:textSize="20dp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:text="전송"
+            android:id="@+id/submit"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</LinearLayout>

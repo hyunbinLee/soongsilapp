@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/main_menu">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quick_Link"
+                android:id="@+id/side"
+                android:onClick="onPopupButtonClick"
+                android:background="#FF488EFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="-SUI-"
+                android:id="@+id/mainbanner"
+                android:layout_weight="1.00"
+                android:gravity="center_vertical|center_horizontal"
+                android:background="#ffffff"
+                android:textColor="#ff000000"
+                android:autoText="false" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="스케줄러"
+                android:id="@+id/button4"
+                android:onClick="scheduler"
+                android:background="#FF488EFF" />
+
+        </LinearLayout>
+
+        <com.astuetz.PagerSlidingTabStrip
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#ffffff"
+            app:pstsIndicatorColor="#FF488EFF"
+            android:fillViewport="false"
+            android:textColor="#ff514759"
+            android:textSize="12dp"
+
+             />
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="460dp"
+            android:id="@+id/container"
+            android:layout_weight="10" />
+
+    </LinearLayout>
+
+</LinearLayout>
